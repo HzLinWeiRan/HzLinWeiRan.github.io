@@ -23,9 +23,9 @@ self.addEventListener('fetch',function(e){
     console.log('fetch')
     e.respondWith(
         caches.match(e.request).then(function(response){
-            // if (e.request.url.endsWith('.png')) {
-            //     return fetch('test2.jpg')
-            // }
+            if (e.request.url.endsWith('.png')) {
+                return fetch('test2.jpg')
+            }
             if(response != null){
                 console.log('fetch response')
                 return response
