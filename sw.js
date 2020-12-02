@@ -26,7 +26,7 @@ self.addEventListener('fetch',function(e){
             if (e.request.url.endsWith('.png')) {
                 return fetch('test2.jpg')
             }
-            
+
             if(response != null){
                 console.log('fetch response')
                 return response

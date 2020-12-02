@@ -1,16 +1,15 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.1.0/workbox-sw.js");
-var cacheStorageKey = 'minimal-pwa-1'
+var cacheStorageKey = 'minimal-pwa-2'
 var cacheList=[
-  '/docs',
+  '/',
   'index.html',
   'manifest.json',
   'main3.css',
   'test.png',
   'test2.jpg'
 ]
-
-
 self.addEventListener('install',e =>{
+
     console.log('install')
     e.waitUntil(
         caches.open(cacheStorageKey)
